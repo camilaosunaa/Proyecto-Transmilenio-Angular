@@ -1,13 +1,35 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterLink, RouterOutlet} from "@angular/router";
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [
+    RouterLink,
+    RouterOutlet
+  ],
+  styleUrls: ['./app.component.css']
 })
+
+
 export class AppComponent {
-  title = 'angularWeb';
+  title = 'My Application';
+
+  onAddClick() {
+    // Lógica para agregar
+    console.log('Añadir clicado');
+  }
+
+  onDeleteClick() {
+    // Lógica para eliminar
+    console.log('Eliminar clicado');
+  }
+
+  onEditClick() {
+    // Navegar a otra pantalla o abrir un modal
+    console.log('Editar clicado');
+    // Ejemplo de navegación:
+    // this.router.navigate(['/editar']);
+  }
 }
