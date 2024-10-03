@@ -1,1 +1,37 @@
-<p>conductor works!</p>
+<div class="container">
+    <h1>TRANSMILENIO</h1>
+    
+    <div class="actions">
+      <button (click)="addConductor()">Añadir Conductor</button>
+      <button (click)="removeConductor()">Eliminar Conductor</button>
+    </div>
+    <app-conductor-popup></app-conductor-popup>
+    <table>
+      <thead>
+        <tr>
+          <th>Check</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Cédula</th>
+          <th>Teléfono</th>
+          <th>Dirección</th>
+          <th>Icon</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let conductor of conductores">
+          <td><input type="checkbox" /></td>
+          <td>
+            <img [src]="conductor.image" alt="Foto" class="profile-pic" />
+            {{ conductor.nombre }}
+          </td>
+          <td>{{ conductor.apellido }}</td>
+          <td>{{ conductor.cedula }}</td>
+          <td>{{ conductor.telefono }}</td>
+          <td>{{ conductor.direccion }}</td>
+          <td><i class="icon-edit">✏️</i></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

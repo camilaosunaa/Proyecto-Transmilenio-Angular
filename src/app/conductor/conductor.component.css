@@ -1,0 +1,49 @@
+.container {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    color: green;
+    font-size: 2em;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  .icon-edit {
+    cursor: pointer;
+  }
+  
